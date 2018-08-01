@@ -1,0 +1,22 @@
+<div>
+	<table *ngIf="dataset[0]" class="table">
+		<thead>
+			<tr>
+				<th *ngIf="multiple == 'true'" (click)="selectAll()">
+					<input type="checkbox" checked *ngIf="selectedTrs.length == dataset.length">
+					<input type="checkbox" *ngIf="selectedTrs.length != dataset.length">
+				</th>
+				<th *ngFor="let key of (columns[0] ? columns : getKeys(dataset[0]))">{{dic.getDictionary(key, configObj.dictionary)}}</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr *ngFor="let item of dataset" (click)="selectTrs($event, item)" [class.actived]="selectedTrs.includes(item[configObj['key']])">
+				<td *ngIf="multiple == 'true'">
+					<input type="checkbox" checked *ngIf="selectedTrs.includes(item[configObj['key']])">
+					<input type="checkbox" *ngIf="!selectedTrs.includes(item[configObj['key']])">
+				</td>
+				<td *ngFor="let key of (columns[0] ? columns : getKeys(item))">{{item[key]}}</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
