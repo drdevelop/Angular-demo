@@ -1,0 +1,17 @@
+{
+	"api": "http://119.23.55.48:8080/search?field=张韶涵",
+	"keys": "id,discountRate,properName,kind,cityId,poster",
+	"method": "get",
+	"colAttributes": {
+		"properName": {
+			"type": "replaceReg",
+			"reg": "(.).+",
+			"val": "$1***"
+		}
+	},
+	"hideColumns": "id,poster",
+	"multiple": true,
+	"cn": {
+		"id": "唯一辨识"
+	}
+}

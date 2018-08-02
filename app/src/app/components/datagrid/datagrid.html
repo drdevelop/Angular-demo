@@ -1,0 +1,20 @@
+<table>
+	<thead>
+		<th>
+			<input type="checkbox" *ngIf="multiple&&!(selectTrs.length==goodlist.length)" (click)="selectAll(0)"/>
+			<input type="checkbox" *ngIf="multiple&&selectTrs.length==goodlist.length" checked (click)="selectAll(1)"/>
+		</th>
+		<ng-template ngFor let-key [ngForOf]="goodlist[0]?keys:[]">
+			<th *ngIf="!hideColumns.includes(key)">{{dic.getDictionary(key,configDic)}}</th>
+		</ng-template>
+	</thead>
+	<tbody>
+		<tr *ngFor="let item of goodlist" (click)="changeSelect(item.id)" [class.active]="selectTrs.includes(item.id)">
+			<td>
+				<input type="checkbox" *ngIf="multiple&&!selectTrs.includes(item.id)"/>
+				<input type="checkbox" *ngIf="multiple&&selectTrs.includes(item.id)" checked/>
+			</td>
+			<td *ngFor="let key of keys" [style.display]="(!hideColumns.includes(key))?'inlineBlock':'none'">{{filterContext(key,item[key])}}</td>
+		</tr>
+	</tbody>
+</table>

@@ -1,0 +1,16 @@
+<form action="">
+	<ng-template ngFor let-key [ngForOf]="columns">
+		<p [ngSwitch]="configObj.colAttributes&&configObj.colAttributes[key]?configObj.colAttributes[key].type:'text'">
+			<label>
+				{{dic.getDictionary(key)}}
+			</label>
+			
+			<select name="" *ngSwitchCase="'list'">
+				<option *ngFor="let item of configObj.colAttributes[key].dataset" [value]="item[configObj.colAttributes[key].value]">{{item[configObj.colAttributes[key].text]}}</option>				
+			</select>
+			<input type="checkbox" *ngSwitchCase="'checkbox'"/>
+			<input type="text" *ngSwitchDefault/>
+		</p>
+	</ng-template>
+	
+</form>

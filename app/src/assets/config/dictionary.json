@@ -1,0 +1,20 @@
+{
+	"en": {
+		"id": "Id",
+		"discountRate": "DiscountRate",
+		"properName": "ProperName",
+		"areaImage": "AreaImage",
+		"cityId": "CityId",
+		"poster": "Poster",
+		"kind": "Kind"
+	},
+	"cn": {
+		"id": "编号",
+		"discountRate": "折扣",
+		"properName": "票名",
+		"areaImage": "周边图",
+		"cityId": "城市编号",
+		"poster": "宣传图",
+		"kind": "类别"
+	}
+}

@@ -1,0 +1,36 @@
+{
+	"api": "http://119.23.55.48:8080/search?field=张韶涵",
+	"keys": "*",
+	"method": "get",
+	"colAttributes": {
+		"id": {
+			"type": "text",
+			"readonly": true,
+			"default": "00001"
+		},
+		"campaigns": {
+			"type": "list",
+			"dataset": [{
+				"text": "Sam","val": "Sam"
+			},{
+				"text": "Tom","val": "Tom"
+			}],
+			"value": "val",
+			"text": "text"
+		},
+		"properName": {
+			"type": "checkbox"
+		},
+		"rank": {
+			"type": "checkbox"
+		},
+		"duration": {
+			"type": "list-ajax",
+			"url": "http://119.23.55.48:8080/search?field=广州",
+			"method": "get",
+			"value": "id",
+			"text": "title"
+		}
+	},
+	"multiple": true
+}

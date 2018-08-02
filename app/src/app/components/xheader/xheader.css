@@ -1,0 +1,7 @@
+h1{
+	height:44px;line-height: 44px;text-align: center;
+	font-size:18px;margin:0;padding:0;position: relative;
+	}
+span{position: absolute;right: 100px;top:-2px;}
+span button{width:50px;}
+.bg{background: orange;color:#fff;}

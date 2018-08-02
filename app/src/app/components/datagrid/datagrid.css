@@ -1,0 +1,4 @@
+table{border:1px solid #ccc;border-collapse: collapse;margin:100px auto;}
+td,th{border: 1px solid #ccc;text-align: center;padding:6px 4px;}
+.active{background: dodgerblue;color:#fff;}
+

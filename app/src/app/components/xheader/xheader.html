@@ -1,0 +1,6 @@
+<h1 [style.color]="color" [style.background]="bg">
+	<a routerLink="/home" style="margin-right:15px">home</a>
+	<a routerLink="/student">student</a>
+	我是头部
+	<span><button [class.bg]="dic.langType==value" (click)="changeLang(value)" *ngFor="let value of langTypes">{{value}}</button></span>
+</h1>
